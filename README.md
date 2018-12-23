@@ -1,5 +1,4 @@
-# README
-
+# DB設計
 ***
 ## messagesテーブル
 
@@ -7,8 +6,8 @@
 |------|----|-------|
 |body|text||
 |image|string||
-|group_id|integer|null: false, foreign_key: true,add_index|
-|user_id|integer|null: false, foreign_key: true,add_index|
+|group_id|integer|null: false, foreign_key: true, add_index|
+|user_id|integer|null: false, foreign_key: true, add_index|
 
 ### Association
 - belongs_to :group
@@ -20,7 +19,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|text|null: false|
+|group_name|string|null: false|
 
 ### Association
 - has_many :messages
@@ -33,8 +32,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, unique: turue, add_index|
-|email|string|null: false, unique: turue|
+|name|string|null: false, unique: true, add_index|
+|email|string|null: false, unique: true|
 |password|string|null: false|
 
 ### Association
